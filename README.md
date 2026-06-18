@@ -4,3 +4,5 @@ A simple collaborative puzzle game built with Java 21, Spring Boot, and WebSocke
 
 ### Try it out here:
 [https://coop-puzzle-game.onrender.com/](https://coop-puzzle-game.onrender.com/)
+
+(Note: Hosted on Render's free tier, it will probably be laggy)
