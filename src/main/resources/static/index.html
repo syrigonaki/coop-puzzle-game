@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
+    <title>Co-op Puzzle!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="console-container">
+        
+        <div class="header-panel">
+            <h1>Co-op Puzzle!</h1>
+            <div class="matrix-stats">
+                <span id="node-count">Active Users: 0</span>
+                <span id="conn-status" class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="status-text">Offline</span>
+                </span>
+            </div>
+        </div>
+        
+        <div class="main-layout">
+            
+            <canvas id="puzzleCanvas" width="900" height="520"></canvas>
+            
+            <div class="sidebar">
+                <div class="chat-container">
+                    <div id="chat-box" class="chat-box"></div>
+                    <input type="text" id="chat-input" placeholder="Say hello..." autocomplete="off" />
+                </div>
+                
+                <div class="control-matrix">
+                    <button onclick="sendVote()">Vote to Reset (0/0)</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

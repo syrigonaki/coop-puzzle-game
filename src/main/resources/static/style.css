@@ -1,0 +1,201 @@
+:root {
+    --pastel-pink: #FDF6F7;
+    --tea-green: #C7F2A7;
+    --dusty-mauve: #948392;
+    --lobster-pink: #B4656F;
+    --jungle-teal: #4E937A;
+    --lavender: #E8E6FA;
+}
+
+body {
+    background-color: var(--pastel-pink);
+    color: var(--dusty-mauve);
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; 
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; 
+    box-sizing: border-box;
+    user-select: none;
+    background-image: radial-gradient(rgba(148, 131, 146, 0.15) 3px, transparent 3px);
+    background-size: 30px 30px;
+}
+
+
+.console-container {
+    width: 1240px; 
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+
+.header-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 4px solid var(--lavender);
+    border-radius: 20px;
+    padding: 10px 24px; 
+    box-shadow: 0 8px 24px rgba(148, 131, 146, 0.1);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0;
+    color: var(--lobster-pink);
+}
+
+.matrix-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dusty-mauve);
+}
+
+.status-indicator.connected {
+    color: var(--jungle-teal);
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: currentColor;
+    box-shadow: 0 0 10px currentColor;
+}
+
+
+canvas {
+    width: 900px;
+    height: 520px; 
+    flex-shrink: 0; 
+    background-color: #ffffff;
+    border: 4px solid var(--jungle-teal);
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 8px 24px rgba(148, 131, 146, 0.15);
+}
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 300px;
+    height: 520px; 
+    flex-shrink: 0;
+}
+
+.chat-container {
+    flex: 1;
+    background: var(--tea-green);
+    border: 4px solid #ffffff;
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(148, 131, 146, 0.15);
+    overflow: hidden;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 8px;
+}
+
+.chat-box div {
+    background: #ffffff;
+    color: var(--dusty-mauve);
+    border-radius: 12px;
+    padding: 10px 14px;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chat-box div.system-message {
+    background: var(--lobster-pink);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    box-sizing: border-box;
+}
+
+#chat-input {
+    background: #ffffff;
+    border: none;
+    color: var(--dusty-mauve);
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: inset 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#chat-input:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 4px var(--lavender);
+}
+
+
+.control-matrix {
+    display: flex;
+    justify-content: stretch;
+    background-color: transparent;
+    padding: 0;
+}
+
+button {
+    flex: 1;
+    background-color: var(--lobster-pink);
+    color: #ffffff;
+    border: 4px solid #ffffff;
+    border-radius: 20px;
+    padding: 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 6px 16px rgba(180, 101, 111, 0.25);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(180, 101, 111, 0.35);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(180, 101, 111, 0.25);
+}
